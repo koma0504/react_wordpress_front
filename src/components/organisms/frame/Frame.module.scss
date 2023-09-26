@@ -1,0 +1,26 @@
+.frame {
+  position: fixed;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  border: solid 1px #000;
+  overflow: hidden;
+  display: grid;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.page {
+  display: flex;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 60px;
+  scroll-behavior: smooth;
+  /*スクロールバー非表示（IE・Edge）*/
+  -ms-overflow-style: none;
+  /*スクロールバー非表示（Firefox）*/
+  scrollbar-width: none;
+  /*スクロールバー非表示（Chrome・Safari）*/
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

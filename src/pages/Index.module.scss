@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: clamp(0px, 1050px, 90vw);
+}
+.main {
+  width: 100%;
+  text-align: right;
+}
