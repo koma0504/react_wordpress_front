@@ -8,3 +8,12 @@
   width: 100%;
   text-align: right;
 }
+.px {
+  font-size: 16px;
+}
+.em {
+  font-size: 1.6em;
+}
+.rem {
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
+}

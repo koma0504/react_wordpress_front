@@ -6,8 +6,6 @@ import PostBox from "../components/molecules/PostBox";
 import PostType from "@/type/PostType";
 import PostService from "@/serivces/PostService";
 import s from "./Index.module.scss";
-import Frame from "@/components/organisms/frame/Frame";
-import Header from "@/components/organisms/header/Header";
 import Layout from "@/components/templates/layout/Layout";
 import PageTitle from "@/components/atoms/PageTilet/PageTilet";
 const Home: NextPage<{
@@ -17,20 +15,20 @@ const Home: NextPage<{
   return (
     <>
       <Layout>
-        {/* <div className={Index.container}>
-            {postList!.map((post) => {
-              return (
-                <div
-                  key={post.id}
-                  className="w-1/3 pr-4 pb-4 [&:nth-of-type(3n)]:pr-0"
-                >
-                  <PostBox post={post} />
-                </div>
-              );
-            })}
-          </div> */}
+        <div className={s.container}>
+          {postList!.map((post) => {
+            return (
+              <div key={post.id}>
+                <PostBox post={post} />
+              </div>
+            );
+          })}
+        </div>
         <PageTitle>home</PageTitle>
-        <p>
+        <p className={s.px}>px</p>
+        <p className={s.em}>em</p>
+        <p className={s.rem}>rem</p>
+        {/* <p>
           サンプルテキストsampletextさんぷるてきすと漢字漢字
           <br />
           サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字サンプルテキストsampletextさんぷるてきすと漢字漢字
@@ -59,7 +57,7 @@ const Home: NextPage<{
         <p>サンプルテキストsampletextさんぷるてきすと漢字漢字</p>
         <p>サンプルテキストsampletextさんぷるてきすと漢字漢字</p>
         <p>サンプルテキストsampletextさんぷるてきすと漢字漢字</p>
-        <p>サンプルテキストsampletextさんぷるてきすと漢字漢字</p>
+        <p>サンプルテキストsampletextさんぷるてきすと漢字漢字</p> */}
       </Layout>
     </>
   );
