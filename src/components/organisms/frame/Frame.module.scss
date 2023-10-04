@@ -4,7 +4,6 @@
   height: calc(100vh - 80px);
   border: solid 1px #000;
   overflow: hidden;
-  display: grid;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -14,10 +13,12 @@
 }
 
 .page {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
   overflow-y: scroll;
+  width: 100%;
   height: 100%;
-  padding: 60px;
+  padding: max(16px, 4vw);
   scroll-behavior: smooth;
   /*スクロールバー非表示（IE・Edge）*/
   -ms-overflow-style: none;
