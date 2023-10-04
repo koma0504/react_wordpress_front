@@ -10,6 +10,10 @@ const About = () => {
         プロフェッショナリズムと真摯な対話で、
         クライアントの真のニーズを把握し、 最高のクリエイティブを制作します。
       </PageText>
+      <PageText props="left">
+        With professionalism and sincere dialogue, we grasp the true needs of
+        our clients and produce the finest creative work.
+      </PageText>
     </Layout>
   );
 };

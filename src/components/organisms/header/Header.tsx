@@ -4,23 +4,23 @@ const Header = () => {
   return (
     <header className={s.header}>
       <h1 className={s.logo}>
-        <Link href="/">company name</Link>
+        <Link href="/">cadle</Link>
       </h1>
       <ul className={s.menu}>
         <li>
           <Link href="/">home</Link>
         </li>
         <li>
-          <Link href="about">about us</Link>
+          <Link href="/about">about us</Link>
         </li>
         <li>
-          <Link href="works">works</Link>
+          <Link href="/works">works</Link>
         </li>
         <li>
-          <Link href="service">service</Link>
+          <Link href="/service">service</Link>
         </li>
         <li>
-          <Link href="contact">contact</Link>
+          <Link href="/contact">contact</Link>
         </li>
       </ul>
     </header>
