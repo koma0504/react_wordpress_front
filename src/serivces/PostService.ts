@@ -49,6 +49,7 @@ class PostService {
           slug: data.categories.edges[0].node.slug,
           name: data.categories.edges[0].node.name,
         },
+        tags: data.tags.edges,
       };
       return post;
     } catch {

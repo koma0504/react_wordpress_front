@@ -1,7 +1,7 @@
 .frame {
   position: fixed;
-  width: calc(100vw - 80px);
-  height: calc(100vh - 80px);
+  width: calc(100vw - 4vw);
+  height: calc(100vh - 4vw);
   border: solid 1px #000;
   overflow: hidden;
   transform: translate(-50%, -50%);
@@ -14,7 +14,8 @@
 
 .page {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 72%;
+  gap: 8%;
   overflow-y: scroll;
   width: 100%;
   height: 100%;

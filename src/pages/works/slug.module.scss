@@ -1,0 +1,32 @@
+.wp_content {
+  width: 100%;
+  word-break: break-all;
+}
+.title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin-bottom: 60px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 160px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+  }
+}
+.category {
+  font-size: 2.2rem;
+}
+.tag_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  font-size: 1.6rem;
+  justify-content: flex-end;
+  margin-bottom: 32px;
+}
+.wrok_outline {
+}

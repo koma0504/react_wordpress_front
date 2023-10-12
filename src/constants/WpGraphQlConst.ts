@@ -61,6 +61,13 @@ export class WpGraphQlPostConst {
       id
       slug
       title
+      tags {
+        edges {
+          node {
+            name
+          }
+        }
+      }
     }
   }`;
 
