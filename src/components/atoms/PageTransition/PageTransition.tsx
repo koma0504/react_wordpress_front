@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Router } from "next/router";
-
+import s from "./PageTransition.module.scss";
 export const PageTransition = ({ children }: { children: ReactNode }) => {
   const pageRef = useRef(null);
 
@@ -10,7 +10,7 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
       gsap.fromTo(
         pageRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 3, ease: "power2.out" }
+        { opacity: 1, duration: 2, ease: "power2.out" }
       );
     };
 
@@ -33,5 +33,9 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
     };
   }, []);
 
-  return <div ref={pageRef}>{children}</div>;
+  return (
+    <div className={s.page_transition} ref={pageRef}>
+      {children}
+    </div>
+  );
 };
