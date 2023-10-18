@@ -1,7 +1,6 @@
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import s from "./Frame.module.scss";
 import { useImageContext } from "@/components/atoms/BgImgProvider";
-import styles from "../../../hooks/useTransition/useTransition.module.scss";
 
 const Frame = ({ children }: { children: ReactNode }) => {
   const { backgroundImage } = useImageContext();
