@@ -6,15 +6,17 @@ import { PageTransition } from "@/components/atoms/PageTransition/PageTransition
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <Frame>
-      <Header />
-      <PageTransition>
-        <main className={s.main}>
-          <div className={s.container}>{children}</div>
-        </main>
-        {/* <Footer /> */}
-      </PageTransition>
-    </Frame>
+    <>
+      <Frame>
+        <Header />
+        <PageTransition>
+          <main className={s.main}>
+            <div className={s.container}>{children}</div>
+          </main>
+          {/* <Footer /> */}
+        </PageTransition>
+      </Frame>
+    </>
   );
 };
 

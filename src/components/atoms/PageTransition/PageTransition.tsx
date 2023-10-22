@@ -2,8 +2,10 @@ import { ReactNode, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { Router } from "next/router";
 import s from "./PageTransition.module.scss";
+import { useHover } from "../HoverContextProvider";
 export const PageTransition = ({ children }: { children: ReactNode }) => {
   const pageRef = useRef(null);
+  const { setIsHovering } = useHover();
 
   useEffect(() => {
     const fadeIn = () => {
@@ -20,6 +22,7 @@ export const PageTransition = ({ children }: { children: ReactNode }) => {
         duration: 0.5,
         ease: "power2.out",
       });
+      setIsHovering(false);
     };
 
     Router.events.on("routeChangeStart", fadeOut);

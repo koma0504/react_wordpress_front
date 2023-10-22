@@ -7,11 +7,13 @@ import Link from "next/link";
 import s from "./works.module.scss";
 import PostOnListType from "@/type/PostOnListType";
 import CommImage from "@/components/atoms/image/CommImage";
+import { useHover } from "@/components/atoms/HoverContextProvider";
 
 const Works = ({ staticPostList }: { staticPostList: PostOnListType[] }) => {
   const postList = usePostListSwr(staticPostList);
   const { setBackgroundImage } = useImageContext();
   console.log(postList);
+  const { setIsHovering } = useHover();
 
   return (
     <Layout>
@@ -29,7 +31,11 @@ const Works = ({ staticPostList }: { staticPostList: PostOnListType[] }) => {
               //   setBackgroundImage("");
               // }}
             >
-              <Link href={`/works/${encodeURIComponent(post.slug)}`}>
+              <Link
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+                href={`/works/${encodeURIComponent(post.slug)}`}
+              >
                 <h2 className={s.work_title}>{post.title}</h2>
                 <CommImage
                   wrapWidth="100%"

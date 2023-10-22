@@ -1,0 +1,21 @@
+.mouse_stalker {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  width: 12px;
+  height: 12px;
+  border: solid 1px #000;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  transition: background-color 300ms ease, width 300ms ease, height 300ms ease;
+}
+
+.hover {
+  width: 56px;
+  height: 56px;
+  background-color: #00000048;
+  transition: background-color 300ms ease, width 300ms ease, height 300ms ease;
+}

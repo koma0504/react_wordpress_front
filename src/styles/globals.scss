@@ -3,12 +3,11 @@ html {
 }
 
 body {
+  cursor: none !important;
   font-size: 1.6rem;
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
     "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
   // background: url("/img/noise.gif");
-  // background-color: rgba(255, 255, 255, 0.4);
-  // background-blend-mode: lighten;
 }
 
 /***
@@ -125,33 +124,4 @@ meter {
 :where(dialog:modal) {
   all: revert;
   box-sizing: border-box;
-}
-.project_outline {
-  & + * {
-    margin-top: 24px;
-  }
-}
-.full_image_block {
-  width: 100%;
-  img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  & + * {
-    margin-top: 40px;
-  }
-}
-.double_image_block {
-  display: grid;
-  gap: 40px;
-  grid-template-columns: 1fr 1fr;
-  img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-  & + * {
-    margin-top: 40px;
-  }
 }
