@@ -1,27 +1,37 @@
 .frame {
   position: fixed;
-  width: 96vw;
+  width: calc(100vw - clamp(16px, 4vw, 40px) * 2);
   height: calc(
-    100vh - 4vw - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    100vh - clamp(16px, 4vw, 40px) * 2 - env(safe-area-inset-top) -
+      env(safe-area-inset-bottom)
   );
   border: solid 1px #000;
   overflow: hidden;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center center;
 }
-
+// .bg {
+//   background-image: url(/img/noise.gif);
+//   background-color: rgba(255, 255, 255, 0.5);
+//   background-blend-mode: lighten;
+//   width: 200vw;
+//   height: 200vh;
+//   border-radius: 50%;
+//   position: absolute;
+//   z-index: -1;
+//   top: -100vh;
+//   left: -100vw;
+//   filter: blur(20px);
+// }
 .page {
   display: grid;
-  grid-template-columns: 20% 72%;
-  gap: 8%;
+  grid-template-columns: 20% 1fr;
+  gap: clamp(16px, 4vw, 40px);
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  padding: max(16px, 4vw);
+  padding: clamp(16px, 4vw, 40px);
   scroll-behavior: smooth;
   /*スクロールバー非表示（IE・Edge）*/
   -ms-overflow-style: none;

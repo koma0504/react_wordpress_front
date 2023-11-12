@@ -3,6 +3,7 @@ import Header from "@/components/organisms/header/Header";
 import { ReactNode } from "react";
 import s from "./Layout.module.scss";
 import { PageTransition } from "@/components/atoms/PageTransition/PageTransition";
+import MovingNoiseCircle from "@/components/atoms/BgRandomAnimation/BgRandomAnimation";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
@@ -13,7 +14,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
           <main className={s.main}>
             <div className={s.container}>{children}</div>
           </main>
-          {/* <Footer /> */}
         </PageTransition>
       </Frame>
     </>

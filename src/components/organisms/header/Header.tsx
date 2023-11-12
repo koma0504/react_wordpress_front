@@ -16,7 +16,7 @@ const Header = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          cadle
+          Cadle
         </Link>
       </h1>
       <ul className={s.menu}>

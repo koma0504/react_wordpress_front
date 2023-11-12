@@ -4,6 +4,10 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 80px;
+  // border: solid 1px #000;
+  padding: clamp(16px, 4vw, 40px);
+  background: #fff;
+  position: relative;
 }
 .container {
   height: fit-content;
