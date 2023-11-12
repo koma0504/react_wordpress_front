@@ -1,5 +1,5 @@
 .main {
-  width: 100%;
+  width: calc(100% - 32px);
   text-align: right;
   display: flex;
   justify-content: flex-end;
@@ -8,6 +8,17 @@
   padding: clamp(16px, 4vw, 40px);
   background: #fff;
   position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% + 32px);
+    height: calc(100% + 32px);
+    display: block;
+    border: solid 2px #fff;
+    transform: translate(-50%, -50%);
+  }
 }
 .container {
   height: fit-content;

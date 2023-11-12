@@ -3,33 +3,18 @@
   top: 0;
   width: fit-content;
   align-self: start; //これがないとgrid内でstickyが動かない
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 .logo {
-  font-size: 6rem;
+  font-size: 8rem;
   font-weight: 900;
-  line-height: 0.77;
-  // border-bottom: solid 1px #000;
-  padding-bottom: calc(clamp(16px, 4vw, 40px) / 2);
+  padding-bottom: calc(clamp(16px, 4vw, 40px));
   position: relative;
-  // &::after {
-  //   content: "";
-  //   width: clamp(16px, 4vw, 40px);
-  //   height: 1px;
-  //   background: #000;
-  //   position: absolute;
-  //   bottom: -1px;
-  //   left: calc(clamp(16px, 4vw, 40px) * -1);
-  // }
 }
 .menu {
   margin-top: auto;
   font-size: 1.8rem;
-  // border: solid 1px #000;
   background: #fff;
-  padding: calc(clamp(16px, 4vw, 40px)) 0;
+  padding: calc(clamp(16px, 4vw, 40px) / 2);
   li {
     width: fit-content;
     padding: 0 4px 2px 4px;

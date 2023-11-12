@@ -10,7 +10,7 @@ const Circle = () => {
   const { size } = useThree(); // キャンバスのサイズを取得
 
   // キャンバスのサイズに基づいて円のサイズを計算
-  const radius = useMemo(() => size.width * 0.014, [size.width]);
+  const radius = useMemo(() => size.width * 0.015, [size.width]);
 
   useFrame(() => {
     timeRef.current += 0.0018; // この値を調整することで動きの速さを変えられます
