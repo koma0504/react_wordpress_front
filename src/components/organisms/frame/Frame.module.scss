@@ -4,7 +4,7 @@
   height: calc(
     100vh - clamp(16px, 4vw, 40px) * 2 - env(safe-area-inset-top) -
       env(safe-area-inset-bottom)
-  );
+  ); //実機でないと確認できない
   border: solid 1px #000;
   overflow: hidden;
   transform: translate(-50%, -50%);
