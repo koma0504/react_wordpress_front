@@ -1,0 +1,18 @@
+@use "variables";
+
+@mixin pc {
+  @media (min-width: variables.$breakpoint-lg) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: variables.$breakpoint-md) and (max-width: (variables.$breakpoint-lg - 1px)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: (variables.$breakpoint-sm - 1px)) {
+    @content;
+  }
+}

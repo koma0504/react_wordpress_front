@@ -1,5 +1,10 @@
+@use "../styles/mixins";
+
 .work_list {
   width: clamp(20vw, 560px, 40vw);
+  @include mixins.sp {
+    width: 100%;
+  }
 }
 .work_item {
   margin-bottom: 124px;

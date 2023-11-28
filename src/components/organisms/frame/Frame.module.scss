@@ -1,8 +1,10 @@
+@use "../../../styles/mixins";
+
 .frame {
   position: fixed;
-  width: calc(100vw - clamp(16px, 4vw, 40px) * 2);
+  width: calc(100vw - clamp(8px, 4vw, 40px) * 2);
   height: calc(
-    100vh - clamp(16px, 4vw, 40px) * 2 - env(safe-area-inset-top) -
+    100vh - clamp(8px, 4vw, 40px) * 2 - env(safe-area-inset-top) -
       env(safe-area-inset-bottom)
   ); //実機でないと確認できない
   border: solid 1px #000;
@@ -27,11 +29,11 @@
 .page {
   display: grid;
   grid-template-columns: 20% 1fr;
-  gap: clamp(16px, 4vw, 40px);
+  gap: clamp(8px, 4vw, 40px);
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  padding: clamp(16px, 4vw, 40px);
+  padding: clamp(8px, 4vw, 40px);
   scroll-behavior: smooth;
   /*スクロールバー非表示（IE・Edge）*/
   -ms-overflow-style: none;
@@ -40,5 +42,9 @@
   /*スクロールバー非表示（Chrome・Safari）*/
   &::-webkit-scrollbar {
     display: none;
+  }
+  @include mixins.sp {
+    grid-template-rows: 10% 1fr;
+    grid-template-columns: none;
   }
 }
