@@ -6,7 +6,12 @@ import PageTitle from "@/components/atoms/PageTilet/PageTilet";
 const Home: NextPage = () => {
   return (
     <Layout>
-      <div>
+      <img
+        src="./img/top_image01.jpg"
+        alt="top_image"
+        className={s.top_image}
+      />
+      <div className={s.top_title}>
         <PageTitle>我々は宇宙人</PageTitle>
       </div>
     </Layout>

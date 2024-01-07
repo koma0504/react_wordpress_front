@@ -17,8 +17,14 @@
 .rem {
   font-size: clamp(1.6rem, 2vw, 2.4rem);
 }
-.test {
-  width: 500px;
-  height: 500px;
-  background-color: red;
+.top_image {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.top_title {
+  position: relative;
 }
