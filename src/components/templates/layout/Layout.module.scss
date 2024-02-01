@@ -1,13 +1,17 @@
+@use "../../../styles/mixins";
+
 .main {
   width: calc(100% - (clamp(8px, 4vw, 40px) / 2));
   text-align: right;
   display: flex;
   justify-content: flex-end;
   padding-top: 80px;
-  // border: solid 1px #000;
   padding: clamp(8px, 4vw, 40px);
   background-color: #fff;
   position: relative;
+  @include mixins.sp {
+    width: 100%;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -19,6 +23,11 @@
     border: solid 2px #fff;
     transform: translate(-50%, -50%);
     z-index: -1;
+    @include mixins.sp {
+      width: calc(100% + 16px);
+      height: calc(100% + 16px);
+      border: solid 2px #fff;
+    }
   }
 }
 .container {

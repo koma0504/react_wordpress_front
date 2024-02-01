@@ -18,6 +18,9 @@
   font-weight: 900;
   padding-bottom: clamp(8px, 4vw, 40px);
   position: relative;
+  @include mixins.sp {
+    padding-bottom: 1%;
+  }
 }
 .menu {
   margin-top: auto;
