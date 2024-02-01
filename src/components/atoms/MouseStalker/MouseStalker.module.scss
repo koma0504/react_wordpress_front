@@ -1,5 +1,8 @@
+@use "../../../styles/mixins";
+
 .mouse_stalker {
   position: absolute;
+
   z-index: 2;
   pointer-events: none;
   width: 12px;
@@ -11,6 +14,13 @@
   display: grid;
   place-items: center;
   transition: background-color 300ms ease, width 300ms ease, height 300ms ease;
+  @include mixins.sp {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: none;
+    visibility: hidden;
+  }
 }
 
 .hover {
@@ -19,4 +29,11 @@
   border: solid 1px #000;
   background-color: #00000048;
   transition: background-color 300ms ease, width 300ms ease, height 300ms ease;
+  @include mixins.sp {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: none;
+    visibility: hidden;
+  }
 }

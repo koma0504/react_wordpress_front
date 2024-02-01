@@ -1,7 +1,11 @@
-// components/MouseStalker.tsx
 import React, { useEffect, useState, useRef } from "react";
 import s from "./MouseStalker.module.scss";
 import { useHover } from "../HoverContextProvider";
+
+/**
+ * マウスストーカー
+ * @returns
+ */
 
 const MouseStalker: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
