@@ -1,3 +1,4 @@
+@use "../styles/mixins";
 .container {
   display: flex;
   align-items: center;
@@ -27,4 +28,14 @@
 }
 .top_title {
   position: relative;
+  @include mixins.sp {
+    text-align: center;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  p {
+    font-family: "Noto Serif JP";
+    font-size: 2rem;
+  }
 }

@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import s from "./Index.module.scss";
+import s from "./index.module.scss";
 import Layout from "@/components/templates/layout/Layout";
 import PageTitle from "@/components/atoms/PageTilet/PageTilet";
 import { useEffect, useState } from "react";
@@ -30,7 +30,11 @@ const Home: NextPage = () => {
     <Layout>
       <RandomImage />
       <div className={s.top_title}>
-        <PageTitle>心に刻むクリエイティブ</PageTitle>
+        <PageTitle>
+          Creativity That <br />
+          Carves into the Heart
+          <p>心に刻むクリエイティブ</p>
+        </PageTitle>
       </div>
     </Layout>
   );
