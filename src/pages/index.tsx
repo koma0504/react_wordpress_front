@@ -30,7 +30,7 @@ const Home: NextPage = () => {
     <Layout>
       <RandomImage />
       <div className={s.top_title}>
-        <PageTitle>我々は宇宙人</PageTitle>
+        <PageTitle>心に刻むクリエイティブ</PageTitle>
       </div>
     </Layout>
   );
