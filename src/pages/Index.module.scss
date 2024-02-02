@@ -40,5 +40,8 @@
   p {
     font-family: "Noto Serif JP";
     font-size: 2rem;
+    @include mixins.sp {
+      font-size: 1.6rem;
+    }
   }
 }
